@@ -87,7 +87,7 @@
 
     "custom/logout": {
         "format": " ",
-        "on-click": "wlogout",
+        "on-click": "wleave -b 4",
     },
 
 
