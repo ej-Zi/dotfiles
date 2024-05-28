@@ -78,6 +78,7 @@ button:hover {
     border-bottom: 3px solid #ffffff;
 }
 
+#custom-notification,
 #custom-logout,
 #clock,
 #battery,
@@ -321,4 +322,8 @@ label:focus {
     padding-left: 15px;
     padding-right: 8px;
     border-color: @peach;
+}
+
+#custom-notification {
+    border-radius: 0 0 90px 90px;
 }
