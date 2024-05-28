@@ -6,7 +6,7 @@
     "spacing": 0, // Gaps between modules
 	"margin": "0 0 0 0",
 
-    "modules-left": ["tray", "custom/notification"],
+    "modules-left": ["custom/notification", "tray"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["clock", "pulseaudio", "network", "bluetooth", "battery", "custom/logout"],
 

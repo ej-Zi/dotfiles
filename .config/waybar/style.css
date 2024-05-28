@@ -325,5 +325,7 @@ label:focus {
 }
 
 #custom-notification {
-    border-radius: 0 0 90px 90px;
+    background-color: @teal;
+    border-color: @teal;
+    padding: 5px;
 }
