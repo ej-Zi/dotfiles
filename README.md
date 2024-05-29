@@ -3,15 +3,22 @@
 ### general
 - hyprland
 - kitty
-- rofi
+- rofi-wayland
 - swaync
 - waybar
 - hyprpaper
-- wleave
-- swaylock
+- wleave-git
+- swaylock-effects-git
 - swayidle
 
 - synology-drive
+- stow
+
+- hyprshot
+optional:
+- hyprshot-gui-git
+
+- meson (for building Hyprland plugins with hyprpm)
 
 ### Z Shell
 - zsh
@@ -20,8 +27,14 @@
 - zsh-autosuggestions
 - zsh-syntax-highlighting
 
+- zoxide
+- yay
+
 ### editing
 - nvim
+- powerline-common
+- powerline-fonts
+- fzf
 for latex:
 - texlive
 - texlive-langgerman
@@ -38,3 +51,8 @@ for latex:
 ### fonts
 - ttf-fira-code-nerd
 - ttf-jetbrains-mono-nerd
+
+(other jp, cn, kr fonts also possible)
+- adobe-source-han-sans-cn-fonts
+- adobe-source-han-sans-jp-fonts
+- adobe-source-han-sans-kr-fonts
