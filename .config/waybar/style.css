@@ -2,7 +2,7 @@
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Fira Code;
+    font-family: JetBrainsMono Nerd Font, Fira Code;
     font-size: 15px;
     font-weight: 600;
 }
