@@ -1,6 +1,6 @@
 
-
-## general
+## Packages
+### general
 - hyprland
 - kitty
 - rofi
@@ -13,20 +13,20 @@
 
 - synology-drive
 
-## Z Shell
+### Z Shell
 - zsh
 - oh-my-zsh
     [ohmyzsh github](https://github.com/ohmyzsh/ohmyzsh)
 - zsh-autosuggestions
 - zsh-syntax-highlighting
 
-## editing
+### editing
 - nvim
 for latex:
 - texlive
 - texlive-langgerman
 
-## fcitx5
+### fcitx5
 - fcitx5-im
 - fcitx5-mozc
     for Japanese input
@@ -35,6 +35,6 @@ for latex:
 - fcitx5-m17n
     more IMs (eg. Hindi)
 
-## fonts
+### fonts
 - ttf-fira-code-nerd
 - ttf-jetbrains-mono-nerd

@@ -13,6 +13,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set autochdir
+set ignorecase
 
 let g:coc_snippet_next = "<tab>"
 let g:blamer_enabled = 1

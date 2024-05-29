@@ -26,3 +26,5 @@ map("n", "<A-w>", "<C-w>w")
 
 map("i","<C-Backspace>", "<C-w>")
 map("i","<C-Del>", "<C-o>dw")
+
+map("n", "<ESC>", ":noh<CR>")
