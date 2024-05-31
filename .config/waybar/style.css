@@ -147,7 +147,7 @@ button:hover {
     color: shade(@maroon, 0.9);
 }
 
-#battery.charging, #battery.plugged {
+#battery.charging, #battery.plugged, #battery.full {
     color: @green;
 }
 

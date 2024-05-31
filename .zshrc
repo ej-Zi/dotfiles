@@ -169,3 +169,4 @@ source ~/.powerlevel10k/powerlevel10k.zsh-theme
 [ -f "/home/evaj/.ghcup/env" ] && . "/home/evaj/.ghcup/env" # ghcup-env
 eval "$(zoxide init --cmd cd zsh)"
 
+export PATH="$HOME/.bin:$PATH"

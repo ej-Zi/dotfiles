@@ -8,6 +8,7 @@ end
 
 map("n", "<leader>s", ":Startify<CR>")
 map("n", ":Q", ":q<CR>")
+map("n", ":W", ":w<CR>")
 
 map("n", "<leader>f", ":Telescope find_files<CR>")
 map("n", "<leader>z", ":Telescope live_grep<CR>")
