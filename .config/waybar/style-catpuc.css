@@ -8,7 +8,7 @@
 }
 
 window#waybar {
-    background-color: @base;
+    background-color: transparent;
 	border-radius: 1.5em;
     color: @text;
     transition-property: background-color;
@@ -58,13 +58,13 @@ button:hover {
 }
 
 #workspaces button:hover {
-    background: @blue;
+    background: @lavender;
     color: @base;
 	border-radius: inherit;
 }
 
 #workspaces button.active {
-    background-color: @blue;
+    background-color: @lavender;
     color: @base;
 	border-radius: inherit;
 }
@@ -115,16 +115,19 @@ button:hover {
 #workspaces > button:first-child {
     margin-left: 0;
     padding-left: 15px;
+    border-radius: 0 0 0 90px;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
 #workspaces > button:last-child {
     margin-right: 0;
     padding-right: 15px;
+	border-radius: 0 0 90px 0;
 }
 
 #workspaces > button:only-child {
 	margin-left: 0;
+	border-radius: 0 0 90px 90px;
 }
 
 #workspaces > button:not(:last-child) {
@@ -322,7 +325,7 @@ label:focus {
 }
 
 #custom-notification {
-    background-color: @blue;
-    border-color: @blue;
+    background-color: @teal;
+    border-color: @teal;
     padding: 5px;
 }

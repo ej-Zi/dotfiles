@@ -54,7 +54,7 @@ exec-once = waybar & hyprpaper
 exec-once = fcitx5
 exec-once = synology-drive
 exec-once = ~/.config/hypr/scripts/sleep.sh
-exec-once = hyprpm reload -n
+# exec-once = hyprpm reload -n
 exec-once = swaync
 exec-once = wl-gammarelay-rs
 
@@ -77,8 +77,8 @@ env = HYPRCURSOR_SIZE,24
 
 # https://wiki.hyprland.org/Configuring/Variables/#general
 general { 
-    gaps_in = 0
-    gaps_out = 0
+    gaps_in = 3
+    gaps_out = 8
 
     border_size = 3
 
@@ -93,10 +93,13 @@ general {
     allow_tearing = false
 
     layout = dwindle
+
+    #cursor_inactive_timeout = 5
 }
 
 # https://wiki.hyprland.org/Configuring/Variables/#decoration
 decoration {
+    rounding = 15
 
     # Change transparency of focused and unfocused windows
     active_opacity = 1.0

@@ -6,9 +6,9 @@
     "spacing": 0, // Gaps between modules
 	"margin": "0 0 0 0",
 
-    "modules-left": ["hyprland/workspaces", "tray"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["custom/notification", "clock", "pulseaudio", "network", "bluetooth", "battery", "custom/logout"],
+    "modules-left": ["custom/notification", "tray"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["clock", "pulseaudio", "network", "bluetooth", "battery", "custom/logout"],
 
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -20,10 +20,7 @@
             "default": "󰝦"
         },
      },
-
-     "hyprland/window": {
-     },
-
+    
     "tray": {
         "spacing": 10,
         "show-passive-items": true
