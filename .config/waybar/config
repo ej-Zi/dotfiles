@@ -6,9 +6,9 @@
     "spacing": 0, // Gaps between modules
 	"margin": "0 0 0 0",
 
-    "modules-left": ["hyprland/workspaces", "tray"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["custom/notification", "clock", "pulseaudio", "network", "bluetooth", "battery", "custom/logout"],
+    "modules-left": ["custom/notification", "tray", "hyprland/window"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["clock", "hyprland/language","pulseaudio", "network", "bluetooth", "battery", "custom/logout"],
 
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -19,6 +19,14 @@
             "active": "󰪥",
             "default": "󰝦"
         },
+     },
+
+     "hyprland/language": {
+        "format": "{}",
+            "format-de": "de",
+            "format-uk": "uk",
+            "keyboard-name": "at-translated-set-2-keyboard",
+            "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
      },
 
      "hyprland/window": {
