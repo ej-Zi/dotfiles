@@ -137,6 +137,9 @@ button:hover {
 }
 
 #workspaces > button:only-child {
+    color: transparent;
+    background-color: transparent;
+    border-color: transparent;
 	margin-left: 0;
     padding-right: 5px;
     border-radius: 20px;
