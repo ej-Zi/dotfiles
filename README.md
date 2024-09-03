@@ -56,3 +56,15 @@ for latex:
 - adobe-source-han-sans-cn-fonts
 - adobe-source-han-sans-jp-fonts
 - adobe-source-han-sans-kr-fonts
+
+### using stow for dotfiles
+https://www.youtube.com/watch?v=y6XCebnB9gs
+
+- mkdir .dotfiles (bzw. git clone git@github.com:ej-Zi/dotfiles.git)
+- treat .dotfiles directory like $HOME (same hierarchy), put all config files + directories here
+- in .dotfiles: stow .
+    to symlink everything (also everytime new file or directory is created)
+- README.md is ignored by stow by default
+
+
+
