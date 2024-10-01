@@ -8,7 +8,7 @@
 
     "modules-left": ["custom/notification", "tray"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["clock", "hyprland/language","pulseaudio", "network", "bluetooth", "battery", "custom/logout"],
+    "modules-right": ["clock", "hyprland/language","pulseaudio", "backlight", "network", "bluetooth", "battery", "custom/logout"],
 
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -94,6 +94,13 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
+    },
+
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "on-scroll-down": "brightnessctl set +1%",
+        "on-scroll-up": "brightnessctl set 1%-",
     },
 
     "custom/logout": {

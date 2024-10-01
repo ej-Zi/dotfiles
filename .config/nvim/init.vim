@@ -14,12 +14,14 @@ set shiftwidth=4
 set expandtab
 set autochdir
 set ignorecase
+set formatoptions=1
+set lbr
 
 let g:coc_snippet_next = "<tab>"
 let g:blamer_enabled = 1
 
 let g:startify_fortune_use_unicode = 1
-let g:startify_bookmarks = [{"c": "~/.dotfiles/.config/nvim"}, {"f": "~/INB21/4_Semester/FOP/sose24/slide98.hs"}]
+let g:startify_bookmarks = [{"a": "~/.dotfiles/.config/nvim"}]
 
 colorscheme catppuccin-macchiato 
 
