@@ -36,7 +36,7 @@ optional:
 - powerline-fonts
 - fzf
 for latex:
-- texlive
+- texlive5 5 
 - texlive-langgerman
 
 ### fcitx5
@@ -66,5 +66,10 @@ https://www.youtube.com/watch?v=y6XCebnB9gs
     to symlink everything (also everytime new file or directory is created)
 - README.md is ignored by stow by default
 
+### audio
+- pulseaudio
+- pactl (PulseAudio Control)
+- pavucontrol (PulseAudio Frontend)
 
-
+pulseaudio-ctl can also be used to control volume
+Don't have pulseaudio and pipewire installed at the same time!
