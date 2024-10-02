@@ -43,7 +43,7 @@
     },
 
     "clock": {
-        "format": "  {:%H:%M    %d.%m}",
+        "format": "  {:%H:%M    %d.%m.}",
 		"interval": 1,
         "on-click": "gnome-calendar"
     },
@@ -80,7 +80,7 @@
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon}",
-        "format-bluetooth-muted": " {icon}",
+        "format-bluetooth-muted": " {icon} Backend",
         "format-muted": "",
         // "format-source": "{volume}% ",
         // "format-source-muted": "",
@@ -99,8 +99,8 @@
     "backlight": {
         "format": "{percent}% {icon}",
         "format-icons": ["󰃞", "󰃟", "󰃠"],
-        "on-scroll-down": "brightnessctl set +1%",
-        "on-scroll-up": "brightnessctl set 1%-",
+        "on-scroll-down": "brightnessctl set 1%-",
+        "on-scroll-up": "brightnessctl set +1%",
     },
 
     "custom/logout": {

@@ -1,24 +1,24 @@
 {
     "label" : "shutdown",
     "action" : "systemctl poweroff",
-    "text" : "S",
+    "text" : "Shutdown [S]",
     "keybind" : "s"
 }
 {
     "label" : "reboot",
     "action" : "systemctl reboot",
-    "text" : "R",
+    "text" : "Reboot [R]",
     "keybind" : "r"
 }
 {
     "label" : "logout",
     "action" : "loginctl kill-session $XDG_SESSION_ID",
-    "text" : "E",
+    "text" : "Logout [E]",
     "keybind" : "e"
 }
 {
     "label" : "lock",
     "action" : "swaylock -f --config ~/.config/swaylock/macchiato.conf",
-    "text" : "L",
+    "text" : "Lock [L]",
     "keybind" : "l"
 }
