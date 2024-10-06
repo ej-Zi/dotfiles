@@ -73,3 +73,8 @@ https://www.youtube.com/watch?v=y6XCebnB9gs
 
 pulseaudio-ctl can also be used to control volume
 Don't have pulseaudio and pipewire installed at the same time!
+
+### display manager
+- ly
+after installing: sudo systemctl enable ly
+(disable other dm before)

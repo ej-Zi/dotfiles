@@ -2,11 +2,11 @@
     "reload_style_on_change": true,
     "layer": "top",
     "position": "top",
-    "height": 33, // Waybar height (to be removed for auto height)
+    "height": 35, // Waybar height (to be removed for auto height)
     "spacing": 0, // Gaps between modules
 	"margin": "0 0 0 0",
 
-    "modules-left": ["custom/notification", "tray"],
+    "modules-left": ["custom/notification", "tray", "cpu", "memory", "temperature"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["clock", "hyprland/language","pulseaudio", "backlight", "network", "bluetooth", "battery", "custom/logout"],
 
@@ -132,10 +132,10 @@
 
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": false
+        "tooltip": true
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% "
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -143,7 +143,7 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", "", "", ""]
     },
 
 }

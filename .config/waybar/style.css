@@ -188,23 +188,15 @@ label:focus {
 }
 
 #cpu {
-    color: shade(@mauve, 0.9);
-}
-
-#bluetooth {
-    color: @yellow;
+    color: shade(@sapphire, 1.1);
 }
 
 #memory {
-    color: shade(@green, 0.65);
+    color: shade(@teal, 0.8);
 }
 
 #disk {
     color: #964B00;
-}
-
-#backlight {
-    color: #90b1b1;
 }
 
 #network {
@@ -249,7 +241,7 @@ label:focus {
 }
 
 #temperature {
-    color: #f0932b;
+    color: shade(@peach, 1.1);
 }
 
 #temperature.critical {
