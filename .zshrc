@@ -170,3 +170,8 @@ source ~/.powerlevel10k/powerlevel10k.zsh-theme
 eval "$(zoxide init --cmd cd zsh)"
 
 export PATH="$HOME/.bin:$PATH"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+

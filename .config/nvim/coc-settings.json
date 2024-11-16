@@ -1,4 +1,4 @@
-
+{
     "languageserver": {
       "haskell": {
         "command": "haskell-language-server-wrapper",
@@ -16,8 +16,8 @@
             }
           }
         }
-      }
-    }
+      },
 
+   }
 
-
+}
