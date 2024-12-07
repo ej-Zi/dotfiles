@@ -6,7 +6,7 @@
     "spacing": 0, // Gaps between modules
 	"margin": "0 0 0 0",
 
-    "modules-left": ["custom/notification", "tray", "cpu", "memory", "temperature"],
+    "modules-left": ["custom/notification", "tray"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["clock", "hyprland/language","pulseaudio", "backlight", "network", "bluetooth", "battery", "custom/logout"],
 
@@ -110,7 +110,7 @@
       
     "custom/notification": {
         "tooltip": false,
-        "format": "{icon} {}",
+        "format": "{} {icon}",
         "format-icons": {
           "notification": "<span foreground='red'><sup></sup></span>",
           "none": "",
