@@ -1,5 +1,5 @@
 filetype plugin on
-let maplocalleader = "#"
+let maplocalleader = "<space>"
 syntax enable
 
 set termguicolors
@@ -21,7 +21,7 @@ let g:coc_snippet_next = "<tab>"
 let g:blamer_enabled = 1
 
 let g:startify_fortune_use_unicode = 1
-let g:startify_bookmarks = [{"a": "~/.dotfiles/.config/nvim"}]
+let g:startify_bookmarks = [{"a": "~/.dotfiles/.config/nvim/init.vim"}]
 
 colorscheme catppuccin-macchiato 
 

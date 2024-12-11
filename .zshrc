@@ -90,21 +90,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# Use powerline
-USE_POWERLINE="true"
-
-alias vim="/usr/local/bin/nvim"
-alias fop="~/INB21/4_Semester/FOP"
-alias fopw="~/INB21/4_Semester/FOP/fop-ss23"
-alias rech="~/INB21/4_Semester/Rechnerarchitektur"
-alias afs="~/INB21/4_Semester/Afs" 
-alias ml="~/LearnPython; code MachineLearning"
-alias icat="kitty +kitten icat"
-alias ll="ls -la"
-
-source ~/.powerlevel10k/powerlevel10k.zsh-theme
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
@@ -158,7 +143,6 @@ compinit
 USE_POWERLINE="true"
 
 alias vim="/usr/local/bin/nvim"
-alias fop="~/INB21/4_Semester/FOP"
 alias icat="kitty +kitten icat"
 alias ll="ls -la"
 
@@ -167,7 +151,7 @@ source ~/.powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f "/home/evaj/.ghcup/env" ] && . "/home/evaj/.ghcup/env" # ghcup-env
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init --cmd cd zsh)" # zi is now cdi
 
 export PATH="$HOME/.bin:$PATH"
 

@@ -27,7 +27,7 @@ optional:
 - zsh-autosuggestions
 - zsh-syntax-highlighting
 
-- zoxide
+- zoxide https://www.youtube.com/watch?v=aghxkpyRVDY
 - yay
 
 ### editing
