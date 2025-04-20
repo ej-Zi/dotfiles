@@ -47,6 +47,14 @@ for latex:
     for Chinese input
 - fcitx5-m17n
     more IMs (eg. Hindi)
+- toki pona sitelen pona:
+https://github.com/0x182d4454fb211940/ilo-sitelen/
+ilo-sitelen-git
+
+damit in Discord und anderen Electron Anwendungen funktioniert:
+cp /usr/share/applications/discord.desktop ~/.local/share/applications
+dort bearbeiten:
+Exec=/usr/bin/discord --enable-feature=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime
 
 ### fonts
 - ttf-fira-code-nerd
