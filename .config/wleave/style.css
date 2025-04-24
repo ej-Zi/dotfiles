@@ -6,7 +6,7 @@ window {
     font-family: Fira Code Medium;
     font-size: 16pt;
     color:  @lavender; /* text */
-    background-color: rgba(24, 27, 32, 0.2);
+    background-color: rgba(24, 27, 32, 0.5);
 } 
 
 button {
@@ -26,42 +26,42 @@ button:hover, button:focus {
     background-size: 50%;
     box-shadow: 0 0 10px 3px rgba(0,0,0,.4);
     background-color: @lavender;
-    color: transparent;
+    color: #272635;
     transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.5s ease-in;
 }
 
 #shutdown {
-    background-image: image(url("./icons/power.png"));
+    background-image: url("./icons/power.png");
 }
 #shutdown:hover, #shutdown:focus {
-  background-image: image(url("./icons/power-hover.png"));
+  background-image: url("./icons/power-hover.png");
 }
 
 #logout {
-    background-image: image(url("./icons/logout.png"));
+    background-image: url("./icons/logout.png");
 
 }
 #logout:hover, #logout:focus {
-  background-image: image(url("./icons/logout-hover.png"));
+  background-image: url("./icons/logout-hover.png");
 }
 
 #reboot {
-    background-image: image(url("./icons/restart.png"));
+    background-image: url("./icons/restart.png");
 }
 #reboot:hover, #reboot:focus {
-  background-image: image(url("./icons/restart-hover.png"));
+  background-image: url("./icons/restart-hover.png");
 }
 
 #lock {
-    background-image: image(url("./icons/lock.png"));
+    background-image: url("./icons/lock.png");
 }
 #lock:hover, #lock:focus {
-  background-image: image(url("./icons/lock-hover.png"));
+  background-image: url("./icons/lock-hover.png");
 }
 
 #hibernate {
-    background-image: image(url("./icons/hibernate.png"));
+    background-image: url("./icons/hibernate.png");
 }
 #hibernate:hover, #hibernate:focus {
-  background-image: image(url("./icons/hibernate-hover.png"));
+  background-image: url("./icons/hibernate-hover.png");
 }

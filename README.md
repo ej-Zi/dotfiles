@@ -1,88 +1,109 @@
+# Arch Linux Configuration Guide
+
+A guide for configuring an Arch Linux environment with Hyprland.
 
 ## Packages
-### general
-- hyprland
-- kitty
-- rofi-wayland
-- swaync
-- waybar
-- hyprpaper
-- wleave-git
-- swaylock-effects-git
-- swayidle
 
-- synology-drive
-- stow
+### General System Components
+- `hyprland` - Tiling Wayland compositor
+- `kitty` - GPU-accelerated terminal emulator
+- `rofi-wayland` - Application launcher for Wayland
+- `swaync` - Notification daemon for Wayland
+- `waybar` - Customizable status bar
+- `hyprpaper` - Wallpaper manager for Hyprland
+- `wleave-git` - Session management menu
+- `swaylock-effects-git` - Screen locker with visual effects
+- `swayidle` - Idle management daemon
+- `synology-drive` - Synology Drive client
+- `stow` - Symlink farm manager for dotfiles
+- `hyprshot` - Screenshot utility for Hyprland
+- `meson` - Build system (required for building Hyprland plugins with hyprpm)
 
-- hyprshot
-optional:
-- hyprshot-gui-git
+**Optional:**
+- `hyprshot-gui-git` - GUI interface for Hyprshot
 
-- meson (for building Hyprland plugins with hyprpm)
+### Shell Environment
+- `zsh` - Z shell
+- `oh-my-zsh` - Framework for managing Zsh configuration ([GitHub repository](https://github.com/ohmyzsh/ohmyzsh))
+- `zsh-autosuggestions` - Fish-like autosuggestions for Zsh
+- `zsh-syntax-highlighting` - Syntax highlighting for Zsh
+- `zoxide` - Smarter cd command ([Tutorial video](https://www.youtube.com/watch?v=aghxkpyRVDY))
+- `yay` - AUR helper
 
-### Z Shell
-- zsh
-- oh-my-zsh
-    [ohmyzsh github](https://github.com/ohmyzsh/ohmyzsh)
-- zsh-autosuggestions
-- zsh-syntax-highlighting
+### Text Editing
+- `nvim` - Neovim text editor
+- `powerline-common` - Statusline plugin
+- `powerline-fonts` - Fonts for Powerline
+- `fzf` - Fuzzy finder
 
-- zoxide https://www.youtube.com/watch?v=aghxkpyRVDY
-- yay
+**For LaTeX:**
+- `texlive5` - TeX Live distribution
+- `texlive-langgerman` - German language support for TeX Live
 
-### editing
-- nvim
-- powerline-common
-- powerline-fonts
-- fzf
-for latex:
-- texlive5 5 
-- texlive-langgerman
+### Input Methods (fcitx5)
+- `fcitx5-im` - Input method framework
+- `fcitx5-mozc` - Japanese input support
+- `fcitx5-chinese-addons` - Chinese input support
+- `fcitx5-m17n` - Additional input methods (e.g., Hindi)
 
-### fcitx5
-- fcitx5-im
-- fcitx5-mozc
-    for Japanese input
-- fcitx5-chinese-addons
-    for Chinese input
-- fcitx5-m17n
-    more IMs (eg. Hindi)
-- toki pona sitelen pona:
-https://github.com/0x182d4454fb211940/ilo-sitelen/
-ilo-sitelen-git
+**Sitelen Pona:**
+- `ilo-sitelen-git` - [GitHub repository](https://github.com/0x182d4454fb211940/ilo-sitelen/)
 
-damit in Discord und anderen Electron Anwendungen funktioniert:
+**For Electron applications (Discord, Obsidian, etc.):**
+```bash
 cp /usr/share/applications/discord.desktop ~/.local/share/applications
-dort bearbeiten:
+```
+
+Edit the file and change the Exec line to:
+```
 Exec=/usr/bin/discord --enable-feature=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime
+```
 
-### fonts
-- ttf-fira-code-nerd
-- ttf-jetbrains-mono-nerd
+Reference: [Fcitx5 Wiki - Using on Wayland](https://fcitx-im.org/wiki/Using_Fcitx_5_on_Wayland#Chromium_.2F_Electron)
 
-(other jp, cn, kr fonts also possible)
-- adobe-source-han-sans-cn-fonts
-- adobe-source-han-sans-jp-fonts
-- adobe-source-han-sans-kr-fonts
+### Fonts
+- `ttf-fira-code-nerd` - Fira Code with Nerd Fonts patches
+- `ttf-jetbrains-mono-nerd` - JetBrains Mono with Nerd Fonts patches
 
-### using stow for dotfiles
-https://www.youtube.com/watch?v=y6XCebnB9gs
+**Chines, Japanese, Korean fonts (other fonts also possible):**
+- `adobe-source-han-sans-cn-fonts` - Chinese fonts
+- `adobe-source-han-sans-jp-fonts` - Japanese fonts
+- `adobe-source-han-sans-kr-fonts` - Korean fonts
 
-- mkdir .dotfiles (bzw. git clone git@github.com:ej-Zi/dotfiles.git)
-- treat .dotfiles directory like $HOME (same hierarchy), put all config files + directories here
-- in .dotfiles: stow .
-    to symlink everything (also everytime new file or directory is created)
-- README.md is ignored by stow by default
+[Sitelen Pona font](https://github.com/ETBCOR/nasin-nanpa)
 
-### audio
-- pulseaudio
-- pactl (PulseAudio Control)
-- pavucontrol (PulseAudio Frontend)
+### Dotfiles Management with Stow
+Reference tutorial: [YouTube - Managing dotfiles with GNU Stow](https://www.youtube.com/watch?v=y6XCebnB9gs)
 
-pulseaudio-ctl can also be used to control volume
-Don't have pulseaudio and pipewire installed at the same time!
+1. Create dotfiles directory:
+```bash
+mkdir .dotfiles
+# or clone existing repository:
+# git clone git@github.com:ej-Zi/dotfiles.git
+```
 
-### display manager
-- ly
-after installing: sudo systemctl enable ly
-(disable other dm before)
+2. Treat `.dotfiles` directory like `$HOME` (same hierarchy)
+3. Place all config files and directories within `.dotfiles`
+4. Apply symlinks:
+```bash
+cd .dotfiles
+stow .
+```
+
+**Note:** Run the `stow` command each time you add new files or directories. The `README.md` file is ignored by stow by default.
+
+### Audio
+- `pulseaudio` - Sound server
+- `pactl` - PulseAudio control utility
+- `pavucontrol` - PulseAudio volume control GUI
+
+**Note:** `pulseaudio-ctl` can also be used to control volume. Don't have both PulseAudio and Pipewire installed simultaneously.
+
+### Display Manager
+- `ly` - Minimal display manager
+
+After installing:
+```bash
+sudo systemctl enable ly
+```
+(Make sure to disable any other display manager first)
