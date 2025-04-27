@@ -142,7 +142,7 @@ compinit
 # Use powerline
 USE_POWERLINE="true"
 
-alias vim="/usr/local/bin/nvim"
+alias vim="nvim"
 alias icat="kitty +kitten icat"
 alias ll="ls -la"
 
@@ -154,6 +154,7 @@ source ~/.powerlevel10k/powerlevel10k.zsh-theme
 eval "$(zoxide init --cmd cd zsh)" # zi is now cdi
 
 export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 
 # Load Angular CLI autocompletion.
