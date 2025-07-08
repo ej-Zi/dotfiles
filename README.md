@@ -19,6 +19,9 @@ A guide for configuring an Arch Linux environment with Hyprland.
 - `hyprshot` - Screenshot utility for Hyprland
 - `meson` - Build system (required for building Hyprland plugins with hyprpm)
 
+- `xdg-desktop-portal-hyprland` - Screen capture (damit Bildschirmübertragung geht)
+- `mpv` - Media player (for Anki audio etc.)
+
 **Optional:**
 - `hyprshot-gui-git` - GUI interface for Hyprshot
 
