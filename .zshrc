@@ -159,4 +159,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
-
+# Initialize nvm
+source /usr/share/nvm/init-nvm.sh
