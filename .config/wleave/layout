@@ -18,7 +18,7 @@
 }
 {
     "label" : "lock",
-    "action" : "swaylock -f --config ~/.config/swaylock/macchiato.conf",
+    "action" : "hyprlock",
     "text" : "Lock [L]",
     "keybind" : "l"
 }

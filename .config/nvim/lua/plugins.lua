@@ -54,6 +54,7 @@ return {
     "dense-analysis/ale",
     --------------------------------
 
+    ---Latex------------------------
     {
         "lervag/vimtex",
         lazy = false,
