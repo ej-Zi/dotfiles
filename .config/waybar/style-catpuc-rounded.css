@@ -1,3 +1,4 @@
+/*rounded*/
 @import "macchiato.css";
 
 * {
@@ -177,7 +178,7 @@ label:focus {
 }
 
 #bluetooth {
-    color: @yellow;
+    color: @blue;
 }
 
 #memory {
@@ -189,7 +190,7 @@ label:focus {
 }
 
 #backlight {
-    color: #90b1b1;
+    color: @yellow;
 }
 
 #network {
@@ -325,7 +326,7 @@ label:focus {
 }
 
 #custom-notification {
-    background-color: @teal;
-    border-color: @teal;
+    background-color: @surface1;
+    border-color: @surface1;
     padding: 5px;
 }

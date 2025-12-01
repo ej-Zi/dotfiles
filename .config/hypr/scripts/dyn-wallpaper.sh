@@ -1,0 +1,32 @@
+#!/bin/bash
+
+sleep 2
+
+WALLPAPER_DIRECTORY=~/.config/hypr/dynamic-wallpaper
+
+WALLPAPER_MORNING="1.jpg"
+WALLPAPER_DAY="1.jpg"
+WALLPAPER_EVENING="3.jpg"
+WALLPAPER_NIGHT="4.jpg"
+
+CURRENT_HOUR=$(date +%H)
+
+SELECTED_FILE=""
+
+if (( $CURRENT_HOUR >= 6 && $CURRENT_HOUR < 12 )); then
+SELECTED_FILE=$WALLPAPER_MORNING
+elif (( $CURRENT_HOUR >= 12 && $CURRENT_HOUR < 14 )); then
+SELECTED_FILE=$WALLPAPER_DAY
+elif (( $CURRENT_HOUR >= 14 && $CURRENT_HOUR < 18 )); then
+SELECTED_FILE=$WALLPAPER_EVENING
+else
+SELECTED_FILE=$WALLPAPER_NIGHT
+fi
+
+WALLPAPER="$WALLPAPER_DIRECTORY/$SELECTED_FILE"
+
+export WAYLAND_DISPLAY=wayland-1
+
+hyprctl hyprpaper preload "$WALLPAPER"
+hyprctl hyprpaper wallpaper ",$WALLPAPER"
+hyprctl hyprpaper unload unused
