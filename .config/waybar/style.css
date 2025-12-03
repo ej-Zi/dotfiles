@@ -193,7 +193,7 @@ label:focus {
 #tray {
     color: @blue;
     padding-right: 20px;
-    border-radius: 0 90px 90px 0;
+    border-radius: 90px;
     margin-right: 1px;
 }
 
@@ -219,8 +219,9 @@ label:focus {
 #custom-notification {
     background-color: @surface1;
     border-color: @surface1;
-    border-radius: 90px 0 0 90px;
+    border-radius: 90px;
     margin-left: 1px;
+    margin-right: 2px;
 }
 
 
