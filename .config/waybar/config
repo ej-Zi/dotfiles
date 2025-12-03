@@ -4,7 +4,7 @@
     "position": "top",
     "height": 35, // Waybar height (to be removed for auto height)
     "spacing": 0, // Gaps between modules
-	"margin": "0 0 0 0",
+	"margin": "0 3 0 3",
 
     "modules-left": ["custom/notification", "tray"],
     "modules-center": ["hyprland/workspaces"],
