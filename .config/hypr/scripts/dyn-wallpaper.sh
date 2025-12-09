@@ -1,7 +1,5 @@
 #!/bin/bash
 
-sleep 2
-
 WALLPAPER_DIRECTORY=~/.config/hypr/dynamic-wallpaper
 
 WALLPAPER_MORNING="1.jpg"
@@ -27,6 +25,17 @@ WALLPAPER="$WALLPAPER_DIRECTORY/$SELECTED_FILE"
 
 export WAYLAND_DISPLAY=wayland-1
 
-hyprctl hyprpaper preload "$WALLPAPER"
-hyprctl hyprpaper wallpaper ",$WALLPAPER"
-hyprctl hyprpaper unload unused
+i=0
+while [ $i -le 5 ]; do
+    ((i++))
+    if [ -S /run/user/$UID/hypr/*/.hyprpaper.sock ]; then 
+        hyprctl hyprpaper preload "$WALLPAPER"
+        hyprctl hyprpaper wallpaper ",$WALLPAPER"
+        hyprctl hyprpaper unload unused
+    break
+    fi
+
+    sleep 1
+done
+
+
