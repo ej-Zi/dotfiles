@@ -1,11 +1,11 @@
 #!/bin/bash
 
-WALLPAPER_DIRECTORY=~/.config/hypr/dynamic-wallpaper
+WALLPAPER_DIRECTORY=~/Pictures/hypr-wallpaper
 
 WALLPAPER_MORNING="1.jpg"
 WALLPAPER_DAY="1.jpg"
 WALLPAPER_EVENING="3.jpg"
-WALLPAPER_NIGHT="4.jpg"
+WALLPAPER_NIGHT="5.jpg"
 
 CURRENT_HOUR=$(date +%H)
 
