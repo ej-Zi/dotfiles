@@ -40,6 +40,12 @@ return {
         event = "InsertEnter",
         config = true
     },
+    {
+        'windwp/nvim-ts-autotag',
+    },
+    {
+        'RRethy/vim-illuminate',
+    },
     --------------------------------
 
     ---LSP, Syntax------------------
@@ -47,11 +53,25 @@ return {
         "nvim-treesitter/nvim-treesitter",
         build=":TSUpdate"
     },
-    {
-        "neoclide/coc.nvim",
-        branch="release"
-    },
     "dense-analysis/ale",
+    {
+		"neovim/nvim-lspconfig"
+	},
+	{
+		"williamboman/mason.nvim"
+	},
+	{
+		"williamboman/mason-lspconfig.nvim"
+	},
+
+
+    "hrsh7th/cmp-nvim-lsp",
+	"hrsh7th/cmp-buffer",
+	"hrsh7th/cmp-path",
+	"hrsh7th/nvim-cmp",
+	"hrsh7th/cmp-vsnip",
+	"hrsh7th/vim-vsnip",
+	"hrsh7th/vim-vsnip-integ",
     --------------------------------
 
     ---Latex------------------------
@@ -89,6 +109,9 @@ return {
         'akinsho/git-conflict.nvim',
         version = "*",
         config = true
+    },
+    {
+        "sindrets/diffview.nvim"
     },
     ---------------------------------
     

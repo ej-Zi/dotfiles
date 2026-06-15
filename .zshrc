@@ -146,6 +146,8 @@ alias vim="nvim"
 alias icat="kitty +kitten icat"
 alias ll="ls -la"
 
+alias sail="sh $([ -f sail ] && echo sail || echo vendor/bin/sail)"
+
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -161,3 +163,4 @@ export PATH="$HOME/.cargo/bin:$PATH"
 source <(ng completion script)
 # Initialize nvm
 source /usr/share/nvm/init-nvm.sh
+export PATH=$PATH:$HOME/go/bin

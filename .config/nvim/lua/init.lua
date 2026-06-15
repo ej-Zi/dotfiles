@@ -31,6 +31,15 @@ require'nvim-treesitter.configs'.setup {
     }
 }
 
+require('nvim-ts-autotag').setup({
+  opts = {
+    -- Defaults
+    enable_close = true, -- Auto close tags
+    enable_rename = true, -- Auto rename pairs of tags
+    enable_close_on_slash = false -- Auto close on trailing </
+  }
+})
+
 require("telescope").setup{
     defaults = {
         file_ignore_patterns = {
@@ -120,4 +129,59 @@ require('lualine').setup {
   inactive_winbar = {},
   extensions = {}
 }
+
+require("mason").setup({
+  ui = {
+    icons = {
+      package_installed = "✓",
+      package_pending = "➜",
+      package_uninstalled = "✗"
+    }
+  }
+})
+
+require("mason-lspconfig").setup {}
+
+local cmp = require("cmp")
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      vim.fn["vsnip#anonymous"](args.body)
+    end
+  },
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered()
+  },
+  experimental = {
+    -- ghost_text = true
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.abort(),
+    ['<TAB>'] = cmp.mapping(function(fallback) 
+      if cmp.visible() then
+        cmp.confirm({ behaviour = cmp.ConfirmBehavior.Replace, select = true })
+      elseif vim.fn["vsnip#available"](1) == 1 then
+        feedkey("<Plug>(vsnip-expand-or-jump)", "")
+      else
+        fallback()
+      end
+  	end, { "i", "s" }),
+    ['<S-TAB>'] = cmp.mapping(function(fallback)
+      if vim.fn["vsnip#available"](1) == 1 then
+        feedkey("<Plug>(vsnip-jump-prev)", "")
+	  end
+  	end, { "i", "s" })
+  }),
+  sources = cmp.config.sources({
+    { name = "nvim_lsp" },
+    { name = "vsnip" },
+    { name = "path" }
+  }, {
+    { name = "file" }
+  })
+})
 

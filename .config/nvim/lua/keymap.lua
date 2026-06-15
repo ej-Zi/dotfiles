@@ -17,9 +17,6 @@ map("n", "<leader>b", ":Telescope buffers<CR>")
 -- map("n", "<leader>e", ":Neotree reveal_force_cwd<CR>")
 map("n", "<leader>e", ":Neotree toggle<CR>")
 
-map("n", "gs", ":call CocAction('jumpDefinition', 'split')<CR>")
-map("n", "gp", ":CocCommand prettier.formatFile<CR>")
-
 map("n", "<leader>t", ":bo split +term<CR>")
 map("t", "<ESC>", "<C-\\><C-N>")
 

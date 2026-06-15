@@ -1,0 +1,9 @@
+{
+  "phpdoc-var": {
+    "prefix": "pvar",
+    "body": [
+      "/** @var ${1:Type} $${2:variable} */"
+    ],
+    "description": "Inline PHPDoc type hint"
+  }
+}
