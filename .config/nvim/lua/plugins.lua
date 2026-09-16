@@ -49,10 +49,6 @@ return {
     --------------------------------
 
     ---LSP, Syntax------------------
-    {
-        "nvim-treesitter/nvim-treesitter",
-        build=":TSUpdate"
-    },
     "dense-analysis/ale",
     {
 		"neovim/nvim-lspconfig"
